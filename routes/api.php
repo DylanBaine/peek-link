@@ -54,7 +54,8 @@ Route::get('/v2/render/{theme}', function ($theme) {
     $viewPath = "render.{$theme}-theme";
     abort_if(!view()->exists($viewPath), 404);
     return view($viewPath, [
-        'url' => $url
+        'url' => $url,
+        'domain' => parse_url($url)['host']
     ]);
 });
 
