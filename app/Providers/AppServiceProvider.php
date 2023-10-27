@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use HeadlessChromium\BrowserFactory;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -11,7 +12,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->singleton(BrowserFactory::class, function () {
+            return new BrowserFactory();
+        });
     }
 
     /**
