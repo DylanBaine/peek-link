@@ -63,7 +63,7 @@ Route::get('/v2/render/{theme}', function ($theme) {
 Route::get('/v2/peek-link/{theme}.png', function ($theme) {
     $url = request('url');
     abort_if(!$url, 404);
-    $dir = Cache::remember("peek-link:og-image:$theme:$url", now()->addDay(), function () use ($theme, $url) {
+    $dir = Cache::remember("v2:peek-link:og-image:$theme:$url", now()->addDay(), function () use ($theme, $url) {
         $appUrl = config('app.url');
         return screenshotUrl("$appUrl/api/v2/render/$theme?url=$url", [
             'windowSize'   => [1200, 630],
