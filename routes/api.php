@@ -32,7 +32,7 @@ function screenshotUrl($url, $options = []): string
     $browser = $browserFactory->createBrowser($options);
     try {
         $page = $browser->createPage();
-        $page->navigate($url)->waitForNavigation(Page::NETWORK_IDLE, 100000);
+        $page->navigate($url)->waitForNavigation(Page::LOAD, 100000);
         $page->screenshot()->saveToFile($dir);
         return $dir;
     } finally {
