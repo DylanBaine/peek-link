@@ -2,6 +2,7 @@
 
 use HeadlessChromium\BrowserFactory;
 use HeadlessChromium\Page;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
@@ -69,4 +70,9 @@ Route::get('/v2/peek-link/{theme}.png', function ($theme) {
         ]);
     });
     return response(file_get_contents($dir))->header('content-type', 'image/png');
+});
+
+
+Route::get('/xYM0h', function () {
+    return Artisan::call('cache:clear');
 });
