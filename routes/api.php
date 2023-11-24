@@ -21,11 +21,7 @@ Route::get('/v1/image.jpg', function () {
 
 function screenshotUrl($url, $options = []): string
 {
-    $dir = storage_path(str($url)->slug . '-image.png');
-    if (file_exists($dir)) {
-        Log::debug("@api.5osj5");
-        return $dir;
-    }
+    $dir = storage_path('app/public/' . str($url)->slug . '-image.png');
     Log::debug("@api.HUN56", compact('url', 'options'));
     /** @var BrowserFactory $browserFactory */
     $browserFactory = app(BrowserFactory::class);
@@ -66,7 +62,7 @@ Route::get('/v2/peek-link/{theme}.png', function ($theme) {
     $dir = Cache::remember("v3:peek-link:og-image:$theme:$url", now()->addDay(), function () use ($theme, $url) {
         $appUrl = config('app.url');
         return screenshotUrl("$appUrl/api/v2/render/$theme?url=$url", [
-            'windowSize'   => [1200, 630],
+            'windowSize'   => [2400, 1260],
         ]);
     });
     return response(file_get_contents($dir))->header('content-type', 'image/png');
