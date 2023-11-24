@@ -6,6 +6,7 @@
             style="
             background: url('/api/v2/image.png?url={{ $url }}');
             background-size: cover;
+            background-position: center top;
             width: 100%;
             height: 100%;
             ">

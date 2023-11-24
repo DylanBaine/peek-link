@@ -6,6 +6,7 @@
             style="
             background: url('/api/v2/image.png?url={{ $url }}');
             background-size: cover;
+            background-position: center top;
             width: 100%;
             height: 100%;
             ">
@@ -38,7 +39,7 @@
             style="position: absolute;
                 bottom: 0;
                 width: 100%;
-                background: linear-gradient(0deg, rgba(0, 0, 0, .8) 10%, transparent);
+                background: linear-gradient(0deg, rgba(0, 0, 0, .6) 10%, transparent);
                 height: 40%;
                 z-index: 1;
                 ">

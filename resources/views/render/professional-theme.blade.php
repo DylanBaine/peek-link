@@ -16,7 +16,7 @@
         <div style="width: 50%; display: flex; align-items: center; justify-content: center;">
             <div style="text-align: center;">
                 <h1 style="font-weight: bold; font-size: 3em;">READ MORE</h1>
-                <button
+                {{-- <button
                     style="
                     margin-top: -42px;
                     background: black;
@@ -30,7 +30,7 @@
                     border: none;
                     ">
                     {{ $domain }}
-                </button>
+                </button> --}}
             </div>
         </div>
     </div>

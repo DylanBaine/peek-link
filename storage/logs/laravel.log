@@ -115,3 +115,17 @@
 [2023-11-24 15:31:21] local.DEBUG: close browser  
 [2023-11-24 15:32:05] local.DEBUG: @api.HUN56 {"url":"https://www.dylanbaine.com/","options":[]} 
 [2023-11-24 15:32:08] local.DEBUG: close browser  
+[2023-11-24 15:37:02] local.DEBUG: @api.HUN56 {"url":"http://localhost:23000/","options":{"windowSize":[2400,1260]}} 
+[2023-11-24 15:37:05] local.DEBUG: close browser  
+[2023-11-24 15:37:09] local.DEBUG: @api.HUN56 {"url":"https://www.dylanbaine.com","options":{"windowSize":[2400,1260]}} 
+[2023-11-24 15:37:14] local.DEBUG: close browser  
+[2023-11-24 15:37:36] local.DEBUG: @api.HUN56 {"url":"https://www.dylanbaine.com","options":{"windowSize":[1900,850]}} 
+[2023-11-24 15:37:40] local.DEBUG: close browser  
+[2023-11-24 15:37:50] local.DEBUG: @api.HUN56 {"url":"https://hire.dylanbaine.com","options":{"windowSize":[1900,850]}} 
+[2023-11-24 15:37:55] local.DEBUG: close browser  
+[2023-11-24 15:38:58] local.DEBUG: @api.HUN56 {"url":"https://hire.dylanbaine.com","options":{"windowSize":[1900,850]}} 
+[2023-11-24 15:39:04] local.DEBUG: close browser  
+[2023-11-24 15:39:34] local.DEBUG: @api.HUN56 {"url":"https://www.dylanbaine.com","options":{"windowSize":[1900,850]}} 
+[2023-11-24 15:39:37] local.DEBUG: close browser  
+[2023-11-24 15:39:59] local.DEBUG: @api.HUN56 {"url":"https://www.dylanbaine.com","options":{"windowSize":[1400,1400]}} 
+[2023-11-24 15:40:03] local.DEBUG: close browser  

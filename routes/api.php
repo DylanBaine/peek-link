@@ -41,7 +41,9 @@ function screenshotUrl($url, $options = []): string
 Route::get('/v2/image.png', function () {
     $url = request('url', 'https://dylanbaine.com');
     return Cache::remember("images:$url", now()->addHour(), function () use ($url) {
-        $dir = screenshotUrl($url);
+        $dir = screenshotUrl($url, [
+            'windowSize'   => [1400, 1400],
+        ]);
         return response(file_get_contents($dir))->header('content-type', 'image/png');
     });
 });
@@ -61,9 +63,7 @@ Route::get('/v2/peek-link/{theme}.png', function ($theme) {
     abort_if(!$url, 404);
     $dir = Cache::remember("v3:peek-link:og-image:$theme:$url", now()->addDay(), function () use ($theme, $url) {
         $appUrl = config('app.url');
-        return screenshotUrl("$appUrl/api/v2/render/$theme?url=$url", [
-            'windowSize'   => [2400, 1260],
-        ]);
+        return screenshotUrl("$appUrl/api/v2/render/$theme?url=$url");
     });
     return response(file_get_contents($dir))->header('content-type', 'image/png');
 });
